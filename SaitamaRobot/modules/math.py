@@ -109,7 +109,7 @@ def abs(update: Update, context: CallbackContext):
 def log(update: Update, context: CallbackContext):
     args = context.args
     message = update.effective_message
-    message.reply_text(math.log(int(args[0])))
+    message.reply_text(math.logaritma(int(args[0])))
 
 
 __help__ = """
