@@ -109,7 +109,7 @@ def abs(update: Update, context: CallbackContext):
 def log(update: Update, context: CallbackContext):
     args = context.args
     message = update.effective_message
-    message.reply_text(math.logaritma(int(args[0])))
+    message.reply_text(math.log(int(args[0])))
 
 
 __help__ = """
@@ -128,7 +128,7 @@ Solves complex math problems using https://newton.now.sh
  • `/arcsin`*:* Inverse Sine `/arcsin 0`
  • `/arctan`*:* Inverse Tangent `/arctan 0`
  • `/abs`*:* Absolute Value `/abs -1`
- • `/logaritma`*:* Logaritma `/logaritma 2l8`
+ • `/log`*:* Log `/log 2l8`
 
 _Keep in mind_: To find the tangent line of a function at a certain x value, send the request as c|f(x) where c is the given x value and f(x) is the function expression, the separator is a vertical bar '|'. See the table above for an example request.
 To find the area under a function, send the request as c:d|f(x) where c is the starting x value, d is the ending x value, and f(x) is the function under which you want the curve between the two x values.
@@ -151,7 +151,7 @@ ARCCOS_HANDLER = DisableAbleCommandHandler("arccos", arccos)
 ARCSIN_HANDLER = DisableAbleCommandHandler("arcsin", arcsin)
 ARCTAN_HANDLER = DisableAbleCommandHandler("arctan", arctan)
 ABS_HANDLER = DisableAbleCommandHandler("abs", abs)
-LOG_HANDLER = DisableAbleCommandHandler("logaritma", log)
+LOG_HANDLER = DisableAbleCommandHandler("log", log)
 
 dispatcher.add_handler(SIMPLIFY_HANDLER)
 dispatcher.add_handler(FACTOR_HANDLER)
