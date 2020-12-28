@@ -106,7 +106,7 @@ def abs(update: Update, context: CallbackContext):
 
 
 @run_async
-def log(update: Update, context: CallbackContext):
+def logaritma(update: Update, context: CallbackContext):
     args = context.args
     message = update.effective_message
     message.reply_text(math.log(int(args[0])))
