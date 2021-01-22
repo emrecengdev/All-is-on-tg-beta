@@ -52,36 +52,38 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 Merhaba {}, ben {}! 
-Yapay zeka ile güçlendirilmiş, kapalı kaynak grup yönetim botuyum. 
+Yapay zeka ile güçlendirilmiş, kapalı kaynak grup yönetim botuyum.
+Sadece temel kullanım için türkçeye yer verildi. Geri kalanı selffuck olmaması adına İngilizce devam edecek.
 Herkese açık komutlara, /help komutu ile ulaşabilirsin.
 """
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
-I'm a Hero For Fun and help admins manage their groups with One Punch! Have a look at the following for an idea of some of \
-the things I can help you with.
-
-*Main* commands available:
- • /help: PM's you this message.
- • /help <module name>: PM's you info about that module.
- • /donate: information on how to donate!
+Merhaba! Ben *{}*.
+Yapay zeka ile güçlendirilmiş, kapalı kaynak grup yönetim botuyum.
+Aşağıda kullanıma dair ufak detaylar mevcut.
+*Ana* komutlar:
+ • /help: Sana bu mesajı gönderir.
+ • /help <modül adı>: Seni o modül hakkında bilgilendirir.
+ • /donate: Botu kendi kullanımınız için satın almak istiyorsanız, bağış yapın!
  • /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
+   • Bot ekranında: desteklenen modüller için sana kendi ayarlarını listeler.
+   • Bir grupta kullanılırsa: Sana grupla ilgili ayarları içeren bir mesaj atar.
 
 
 {}
 And the following:
 """.format(
     dispatcher.bot.first_name, ""
-    if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
+    if not ALLOW_EXCL else "\nkomuları kullanmak için başında / yada ! kullanın.\n")
 
 SAITAMA_IMG = "https://telegra.ph/file/bde8e3a309d70cfba558b.jpg"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
-Saitama is hosted on one of Kaizoku's Servers and doesn't require any donations as of now but \
-You can donate to the original writer of the Base code, Paul
-There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
+DONATE_STRING = """Bir bağışçı, seni görmek ne hoş!
+Botda bulunan ve sürekli güncellenen modülleri kullanmak için bağış yapabilirsin. Bot istediğin ayarda modifiye edilebilir.
+Bağış olmadan botu lite düzeyde kullanabilirsin, eğer kötüye kullanım farkedilirse kullanım lisansı iptal edilir.
+Ancak kaynak dosyalarına erişimin olmayacak. 
+Neden mi ? Hazır kodları çalıp/çevirip #teAMdeveLOPeR sj takımlarının ( hayal dünyasında yaşayan) yıkıkların daha fazla ürememesi için.
+Bağış için; [İletişim](https://t.me/quiong)."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -205,10 +207,10 @@ def start(update: Update, context: CallbackContext):
                     ],
                      [
                          InlineKeyboardButton(
-                             text="🚑 Destek Grubu (kanaldan tartışmaya girin) ",
+                             text="🤠 BLOG ",
                              url="https://t.me/emreceng"),
                          InlineKeyboardButton(
-                             text="🔔 Updates Channel",
+                             text="🔔 Bot Güncelleme kanalı",
                              url="https://t.me/bebekyoda")
                      ],
                      [
