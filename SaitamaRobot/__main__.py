@@ -55,6 +55,7 @@ Merhaba {}, ben {}!
 Yapay zeka ile güçlendirilmiş, kapalı kaynak grup yönetim botuyum.
 Sadece temel kullanım için türkçeye yer verildi. Geri kalanı selffuck olmaması adına İngilizce devam edecek.
 Herkese açık komutlara, /help komutu ile ulaşabilirsin.
+Sömestr tatiline kadar BETA sürecindeyim.
 Bot tabanı için Marie'ye teşekkürler.
 """
 
@@ -274,7 +275,7 @@ def help_button(update, context):
     try:
         if mod_match:
             module = mod_match.group(1)
-            text = ("Here is the help for the *{}* module:\n".format(
+            text = (" *{}* Modülünün kullanımı :\n".format(
                 HELPABLE[module].__mod_name__) + HELPABLE[module].__help__)
             query.message.edit_text(
                 text=text,
@@ -345,7 +346,7 @@ def get_help(update: Update, context: CallbackContext):
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
-        text = "Here is the available help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) \
+        text = "*{}* Modülünün kullanımı:\n".format(HELPABLE[module].__mod_name__) \
                + HELPABLE[module].__help__
         send_help(
             chat.id, text,
