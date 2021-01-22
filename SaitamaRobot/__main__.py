@@ -55,6 +55,7 @@ Merhaba {}, ben {}!
 Yapay zeka ile güçlendirilmiş, kapalı kaynak grup yönetim botuyum.
 Sadece temel kullanım için türkçeye yer verildi. Geri kalanı selffuck olmaması adına İngilizce devam edecek.
 Herkese açık komutlara, /help komutu ile ulaşabilirsin.
+Bot tabanı için Marie'ye teşekkürler.
 """
 
 HELP_STRINGS = """
@@ -71,7 +72,7 @@ Aşağıda kullanıma dair ufak detaylar mevcut.
 
 
 {}
-And the following:
+Şuan desteklenen tüm modüller:
 """.format(
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nkomuları kullanmak için başında / yada ! kullanın.\n")
